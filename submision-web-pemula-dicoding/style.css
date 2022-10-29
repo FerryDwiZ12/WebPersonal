@@ -1,0 +1,554 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,200&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+}
+
+@keyframes slideDowm {
+  from {
+    opacity: 0.2;
+    margin-top: -40px;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.slide-down {
+  opacity: 1 !important;
+  animation: slideDown 0.5s;
+}
+
+body {
+  font-family: "Poppins";
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+}
+
+#hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+}
+
+#hamburger-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+  margin-left: 24px;
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: calc(100vh - 50px);
+  width: 100%;
+}
+
+.mobile-menu li {
+  margin-bottom: 10px;
+}
+
+.logo {
+  height: 40px;
+  width: 120px;
+}
+
+li,
+a,
+button {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 16px;
+  color: #edf0f1;
+  text-decoration: none;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-links {
+  list-style: none;
+  padding-right: 50px;
+}
+.nav-links li {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.nav-links li a:hover {
+  color: #ff7a00;
+}
+button:hover {
+  background-color: #fafafa;
+  color: #ff7a00;
+}
+
+button {
+  padding: 9px 25px;
+  font-weight: bold;
+  background-color: #ff7a00;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transform: all 0.3s ease 0s;
+}
+
+.container {
+  margin-top: 130px;
+  display: flex;
+  padding: 0px 300px;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+}
+
+.hero {
+  align-items: centers;
+  justify-content: center;
+}
+
+.hero .fotokunih {
+  width: 400px;
+}
+.keterangan {
+  font-family: "Poppins";
+  padding: 150px 0;
+  text-align: left;
+  align-items: center;
+}
+
+.keterangan h1 {
+  margin-top: -25px;
+  font-size: 50px;
+  color: rgb(255, 255, 255);
+  color: #ff7a00;
+  justify-items: center;
+}
+
+.keterangan p {
+  color: #a7a7a7;
+  margin-top: -8px;
+  font-weight: lighter;
+}
+.keterangan h3 {
+  font-size: 30px;
+  color: #fafafa;
+}
+
+.about {
+  margin: 40px;
+  margin-top: 200px;
+  font-family: "Poppins", sans-serif;
+  padding: 12px 120px;
+}
+.about h1 {
+  color: #fafafa;
+  text-align: center;
+  font-size: 20px;
+}
+
+.about p {
+  color: #a7a7a7;
+  text-align: justify;
+  margin-top: 24px;
+}
+
+.portofolio {
+  font-family: "Poppins", sans-serif;
+  padding: 12px 120px;
+  text-align: center;
+  height: auto;
+}
+.portofolio h1 {
+  font-size: 20px;
+  color: #fafafa;
+}
+
+.portofolio p {
+  margin-top: 20px;
+  text-align: center;
+  color: #a7a7a7;
+}
+.cardview {
+  margin-top: 36px;
+}
+
+.foto-portofolio {
+  width: 400px;
+}
+
+.cardview:hover {
+  transform: scale(1.1);
+}
+
+.container-portofolio {
+  align-items: center;
+}
+
+.fitur-porto {
+  align-items: center;
+  display: flex;
+  display: inline-block;
+  margin: 20px;
+  border-radius: 5px;
+  transition: margin-top 1s;
+}
+
+.contact-me {
+  padding: 12px 120px;
+  text-align: center;
+}
+.contact-me h1 {
+  font-size: 20px;
+  color: #fafafa;
+  font-family: "Poppins";
+}
+.contact-me p {
+  color: #a7a7a7;
+  margin-top: 24px;
+  font-family: "Poppins";
+}
+
+.contact {
+  padding: 0px 120px;
+  margin-top: 36px;
+}
+
+.group-contact {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  color: #262626;
+  height: 100%;
+  width: 100%;
+}
+
+.kotak-kiri {
+  padding: 20px;
+  border-radius: 10px;
+  justify-content: center;
+  width: 70%;
+  background-color: #262626;
+}
+
+.kotak-kanan {
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #262626;
+}
+
+.profile-card {
+  background-color: #262626;
+}
+
+.kotak-kanan h4 {
+  margin-top: 10px;
+  color: #fafafa;
+  background-color: #262626;
+}
+
+.kotak-kanan h3 {
+  color: #ff7a00;
+  background-color: #262626;
+}
+
+.kotak-kanan h6 {
+  color: #8f8f8f;
+  background-color: #262626;
+}
+
+.kotak-kanan img {
+  border-radius: 8px;
+}
+.group-form {
+  background-color: #262626;
+  padding: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: #262626;
+  border-style: none;
+  border: 1px solid #8f8f8f;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+label {
+  color: #8f8f8f;
+  background-color: #262626;
+}
+
+#footer {
+  margin-top: 46px;
+  padding: 30px 120px;
+  background-color: #262626;
+}
+
+.content-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 220px;
+  background-color: #262626;
+}
+
+.footer-kiri {
+  background-color: #262626;
+  margin-bottom: 10px;
+}
+.footer-kiri .foto-footer {
+  width: 120px;
+  background-color: #262626;
+  margin-bottom: 5px;
+}
+
+.footer-kiri h4 {
+  margin-top: 5px;
+  font-weight: normal;
+  background-color: #262626;
+  color: #fafafa;
+  font-style: normal;
+  padding-left: 15px;
+  text-decoration: none;
+}
+
+.footer-kanan {
+  background-color: #262626;
+}
+.footer-kanan h3 {
+  color: #fafafa;
+  background-color: #262626;
+}
+
+.media-social {
+  height: 160px;
+  background-color: #262626;
+  margin-top: 25px;
+}
+
+.media-social .ms-kiri {
+  margin: 10px;
+  background-color: #262626;
+}
+.media-social .ms-kanan {
+  margin: 10px;
+  background-color: #262626;
+}
+
+.media-social .ms-kiri .Dribbble {
+  background-color: #262626;
+  margin-right: 10px;
+}
+
+.media-social .ms-kiri .Github {
+  background-color: #262626;
+}
+
+.media-social .ms-kanan .Instagram {
+  background-color: #262626;
+  margin-right: 10px;
+}
+
+.media-social .ms-kanan .LinkedIn {
+  background-color: #262626;
+}
+
+.media-social a {
+  background-color: #262626;
+}
+
+.Dribbble:hover {
+  transform: scale(1.1);
+}
+
+.Github:hover {
+  transform: scale(1.1);
+}
+
+.Instagram:hover {
+  transform: scale(1.1);
+}
+
+.LinkedIn:hover {
+  transform: scale(1.1);
+}
+footer .footer-copyright {
+  color: #8b8b8b;
+  text-align: center;
+  margin-top: 50px;
+}
+
+footer p {
+  background-color: #262626;
+}
+
+@media only screen and (max-width: 600px) {
+  header nav {
+    display: none;
+  }
+
+  #hamburger-icon {
+    display: block;
+  }
+  .container {
+    margin-top: -120px;
+    padding: 0px;
+    flex-direction: column-reverse;
+  }
+
+  .hero .fotokunih {
+    width: 250px;
+    margin-top: -90px;
+  }
+  .keterangan h3 {
+    text-align: center;
+    font-size: 20px;
+  }
+  .keterangan h1 {
+    text-align: center;
+    font-size: 25px;
+  }
+  .keterangan p {
+    text-align: center;
+    font-size: 15px;
+  }
+
+  .about {
+    padding: 0px;
+    justify-content: center;
+  }
+  .portofolio {
+    padding: 15px;
+    justify-content: center;
+  }
+
+  .portofolio {
+    padding: 5px;
+    justify-content: center;
+  }
+
+  .container-portofolio {
+    padding: 5px;
+  }
+
+  .cardview .foto-portofolio {
+    width: 300px;
+  }
+
+  .fitur-porto {
+    margin: 5px;
+  }
+
+  .contact-me {
+    padding: 5px;
+    margin-top: 5px;
+  }
+
+  .contact {
+    padding: 5px;
+  }
+
+  .group-contact {
+    flex-direction: column;
+  }
+  .kotak-kiri {
+    /* gap: 0px; */
+    padding: 5px;
+    width: 100%;
+  }
+  .kotak-kanan {
+    /* gap: 0px; */
+    padding: px;
+    width: 100%;
+  }
+
+  .profile-card {
+    gap: 0px;
+    padding: 0px;
+  }
+
+  .portofolio p {
+    padding: 5px;
+    justify-content: center;
+  }
+
+  .contact-me p {
+    padding: 5px;
+    margin-top: 24px;
+    justify-content: center;
+  }
+  footer {
+    padding: 0px;
+    margin-top: 0px;
+  }
+
+  .content-footer {
+    padding: 5px;
+    justify-content: center;
+    gap: 120px;
+  }
+
+  .footer-kiri {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .footer-kanan {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .Github,
+  .Dribbble,
+  .Instagram,
+  .LinkedIn {
+    width: 30px;
+  }
+
+  .footer-copyright {
+    padding: 5px;
+    background-color: #262626;
+  }
+  .footer-copyright p {
+    font-size: 8px;
+  }
+}
